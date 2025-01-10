@@ -1,0 +1,256 @@
+@import url('https://fonts.cdnfonts.com/css/sf-pro-display');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.App {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 24px;
+  position: relative;
+  overflow: hidden;
+  background: white;
+}
+
+.content {
+  padding-left: 32px;
+  width: 50%;
+  z-index: 1;
+  opacity: 0;
+  animation: fadeInBlur 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+h1 {
+  font-size: 24px;
+  margin: 0 0 4px 0;
+  color: #1a202c;
+  font-weight: 700;
+  line-height: 1.2;
+  opacity: 0;
+  animation: fadeInBlur 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.1s forwards;
+}
+
+.subtitle {
+  font-size: 16px;
+  color: #6B7280;
+  line-height: 1.5;
+  max-width: 90%;
+  margin-bottom: 24px;
+  opacity: 0;
+  animation: fadeInBlur 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.2s forwards;
+}
+
+.button {
+  display: inline-block;
+  padding: 10px 20px;
+  border: 1px solid #4f4f4f;
+  border-radius: 4px;
+  transition: all 0.2s ease-in;
+  position: relative;
+  overflow: hidden;
+  font-size: 16px;
+  cursor: pointer;
+  color: black;
+  z-index: 1;
+  text-decoration: none;
+  opacity: 0;
+  animation: fadeInBlur 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.3s forwards;
+}
+
+.button:before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%) scaleY(1) scaleX(1.25);
+  top: 100%;
+  width: 140%;
+  height: 180%;
+  background-color: rgba(0, 0, 0, 0.05);
+  border-radius: 50%;
+  display: block;
+  transition: all 0.5s 0.1s cubic-bezier(0.55, 0, 0.1, 1);
+  z-index: -1;
+}
+
+.button:after {
+  content: "";
+  position: absolute;
+  left: 55%;
+  transform: translateX(-50%) scaleY(1) scaleX(1.45);
+  top: 180%;
+  width: 160%;
+  height: 190%;
+  background-color: #000000;
+  border-radius: 50%;
+  display: block;
+  transition: all 0.5s 0.1s cubic-bezier(0.55, 0, 0.1, 1);
+  z-index: -1;
+}
+
+.button:hover {
+  color: #ffffff;
+  border: 1px solid #000000;
+}
+
+.button:hover:before {
+  top: -35%;
+  background-color: #000000;
+  transform: translateX(-50%) scaleY(1.3) scaleX(0.8);
+}
+
+.button:hover:after {
+  top: -45%;
+  background-color: #000000;
+  transform: translateX(-50%) scaleY(1.3) scaleX(0.8);
+}
+
+.image-wrapper {
+  position: absolute;
+  right: 24px;
+  top: 24px;
+  bottom: 24px;
+  height: calc(100% - 48px);
+  width: auto;
+  aspect-ratio: 3/4;
+  perspective: 1000px;
+}
+
+.image-flipper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+  cursor: pointer;
+}
+
+.image-wrapper:hover .image-flipper {
+  transform: rotateY(180deg);
+}
+
+.background-image,
+.image-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 24px;
+}
+
+.background-image {
+  object-fit: cover;
+  object-position: center bottom;
+  opacity: 0;
+  animation: fadeInBlur 1s cubic-bezier(0.16, 1, 0.3, 1) 0.2s forwards;
+}
+
+.image-back {
+  background: white;
+  transform: rotateY(180deg);
+  padding: 36px 24px 24px 20px;
+  text-align: left;
+  border: 1px solid #E5E7EB;
+  border-radius: 24px;
+}
+
+.back-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.resume-header {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  margin-bottom: 36px;
+}
+
+.header-link {
+  color: #1a202c;
+  text-decoration: underline;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.header-link:hover {
+  color: #2B4C7E;
+}
+
+.section-content {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.back-title {
+  color: #6B7280;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.description-frame {
+  padding-left: 36px;
+}
+
+.back-description {
+  color: #1a202c;
+  font-size: 14px;
+  line-height: 1.5;
+  font-weight: 500;
+  padding-right: 24px;
+}
+
+.experience-item {
+  margin-top: 24px;
+}
+
+.company-link {
+  color: #1a202c;
+  text-decoration: underline;
+  font-weight: 500;
+}
+
+.company-link:hover {
+  color: #2B4C7E;
+}
+
+.resume-content {
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+}
+
+@keyframes fadeInBlur {
+  0% {
+    opacity: 0;
+    filter: blur(20px);
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateY(0);
+  }
+}
+
+.hover-label {
+  position: absolute;
+  bottom: 16px;
+  right: 16px;
+  color: #1a202c;
+  font-size: 14px;
+  font-weight: 700;
+  z-index: 2;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 4px 8px;
+  border-radius: 4px;
+  backface-visibility: hidden;
+  transform: rotateY(0deg);
+  opacity: 0;
+  animation: fadeInBlur 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.4s forwards;
+}
