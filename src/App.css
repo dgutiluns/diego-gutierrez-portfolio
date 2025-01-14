@@ -8,17 +8,24 @@
 }
 
 .App {
-  height: 100vh;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+/* First section with tree image */
+.main-content-section {
+  height: 90vh;
+  min-height: 600px;
+  width: 100%;
   display: flex;
   align-items: center;
   padding: 24px;
   position: relative;
-  overflow: hidden;
-  background: white;
 }
 
+
 .content {
-  padding-left: 32px;
+  padding-left: 60px;
   width: 50%;
   z-index: 1;
   opacity: 0;
@@ -156,6 +163,7 @@ h1 {
   text-align: left;
   border: 1px solid #E5E7EB;
   border-radius: 24px;
+  overflow-y: auto;
 }
 
 .back-content {
@@ -242,15 +250,504 @@ h1 {
   position: absolute;
   bottom: 16px;
   right: 16px;
+  background: rgba(255, 255, 255, 0.9);
   color: #1a202c;
   font-size: 14px;
-  font-weight: 700;
+  font-weight: 500;
+  padding: 8px 16px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   z-index: 2;
-  background: rgba(255, 255, 255, 0.9);
-  padding: 4px 8px;
-  border-radius: 4px;
   backface-visibility: hidden;
   transform: rotateY(0deg);
   opacity: 0;
   animation: fadeInBlur 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.4s forwards;
+}
+
+.image-wrapper:hover .hover-label {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+
+/* Add media queries for smaller screens */
+@media (max-width: 1024px) {
+  .header-link {
+    font-size: 12px;
+  }
+
+  .back-title {
+    font-size: 12px;
+  }
+
+  .back-description {
+    font-size: 12px;
+    padding-right: 16px;
+  }
+
+  .image-back {
+    padding: 24px 16px 16px 16px;
+  }
+
+  .resume-header {
+    gap: 16px;
+    margin-bottom: 24px;
+  }
+
+  .description-frame {
+    padding-left: 24px;
+  }
+}
+
+@media (max-width: 768px) {
+  .header-link {
+    font-size: 11px;
+  }
+
+  .back-title {
+    font-size: 11px;
+  }
+
+  .back-description {
+    font-size: 11px;
+    padding-right: 12px;
+  }
+
+  .image-back {
+    padding: 20px 12px 12px 12px;
+  }
+
+  .description-frame {
+    padding-left: 16px;
+  }
+}
+
+/* Add this new class for the divider */
+.section-divider {
+  display: none;
+}
+
+/* About section styling */
+.about-section {
+  padding-top: 0;
+  padding-bottom: 2rem;
+  margin-top: -8rem;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+.about-section .content {
+  padding-left: 60px;
+  width: 40%;
+  z-index: 1;
+}
+
+.about-section h1 {
+  font-size: 48px;
+  margin-bottom: 16px;
+  color: #1a202c;
+  font-weight: 700;
+}
+
+.about-section h2 {
+  font-size: 32px;
+  margin-bottom: 24px;
+  color: #1a202c;
+  font-weight: 700;
+}
+
+.about-section p {
+  font-size: 16px;
+  color: #6B7280;
+  line-height: 1.6;
+  margin-bottom: 16px;
+  max-width: 90%;
+}
+
+
+/* New styles for the about section image flipper */
+.about-section .image-wrapper {
+  width: 50%;
+  height: 500px;
+  position: relative;
+  margin-left: 40px;
+  margin-right: 60px;
+}
+
+.about-section .image-flipper {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+  cursor: pointer;
+}
+
+.about-section .background-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 20%;
+  border-radius: 24px;
+}
+
+.about-section .image-back {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: rotateY(180deg);
+  background: white;
+  padding: 36px 24px;
+  border-radius: 24px;
+  border: 1px solid #E5E7EB;
+}
+
+/* Style for the coursework back content */
+.about-section .resume-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem; /* Consistent spacing */
+}
+
+.about-section .resume-content h2 {
+  font-size: 24px;
+  font-weight: 700;
+  color: #1a202c;
+  margin-bottom: 0.25rem; /* Further reduced */
+}
+
+.about-section .resume-content .university {
+  font-size: 16px;
+  font-weight: normal;
+  text-decoration: underline;
+  color: #1a202c;
+  margin-top: 0.15rem;
+  margin-bottom: 0.25rem;
+}
+
+.about-section .courses-container {
+  column-count: 2;
+  column-gap: 2rem;
+  margin-bottom: 0.5rem; /* Add space before next university section */
+}
+
+.about-section .resume-content p {
+  font-size: 16px;
+  line-height: 1.4; /* Slightly reduced */
+  color: #6B7280;
+  margin-bottom: 0.25rem; /* Reduced spacing between course items */
+}
+
+.about-section .image-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem; /* Slightly reduced gap */
+  width: 50%;
+  margin-left: 40px;
+  margin-right: 60px;
+}
+
+/* Smaller dimensions for both images */
+.about-section .top-image,
+.about-section .bottom-image {
+  width: 100%;
+  height: 350px; /* Reduced from 500px */
+  position: relative;
+}
+
+.about-section .top-image .image-flipper,
+.about-section .bottom-image .image-flipper {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+  cursor: pointer;
+}
+
+.about-section .top-image .background-image,
+.about-section .bottom-image .background-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 55%;
+  border-radius: 24px;
+}
+
+.about-section .top-image .image-back,
+.about-section .bottom-image .image-back {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: rotateY(180deg);
+  background: white;
+  padding: 36px 24px;
+  border-radius: 24px;
+  border: 1px solid #E5E7EB;
+}
+
+.about-section .empty-message {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  font-size: 20px;
+  color: #6B7280;
+  text-align: center;
+  padding: 2rem;
+}
+
+.about-section .empty-message h2 {
+  font-size: 32px; /* Match About font size */
+  font-weight: 700;
+  color: #1a202c;
+  text-align: center;
+}
+
+.about-section .empty-message {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  padding: 2rem;
+}
+
+
+.about-section {
+  padding-top: 0;
+  padding-bottom: 2rem;
+  margin-top: -8rem;
+}
+
+
+/* Media query for smaller screens */
+@media screen and (max-height: 800px) {
+  
+  .about-section {
+    margin-top: 0; /* Remove negative margin */
+    padding-top: 4rem; /* Add padding instead */
+  }
+}
+
+/* Projects section styling */
+.projects-section {
+  padding: 80px 0;
+  margin-bottom: 60px;
+  width: 100%;
+  text-align: center;
+  position: relative; /* For absolute positioning of pseudo-elements */
+}
+
+/* New container for horizontal scrolling */
+.projects-container {
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  gap: 32px;
+  overflow-x: auto;
+  padding: 20px 0;
+  padding-left: 100px;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  position: relative; /* For mask positioning */
+  mask-image: linear-gradient(
+    to right,
+    transparent,
+    black 10%,
+    black 95%,
+    transparent
+  );
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent,
+    black 10%,
+    black 95%,
+    transparent
+  );
+}
+
+/* Hide scrollbar on Chrome/Safari */
+.projects-container::-webkit-scrollbar {
+  display: none;
+}
+
+.project-card {
+  flex: 0 0 600px;
+  background: white;
+  border-radius: 24px;
+  padding: 16px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  transition: flex-basis 0.3s ease;
+  cursor: pointer;
+  position: relative;
+  height: 400px;
+}
+
+.project-card:hover {
+  flex-basis: 1000px;
+}
+
+.project-content {
+  width: 568px;
+  margin: 0;
+}
+
+.project-image {
+  width: 100%;
+  height: 300px;
+  background: #f0f0f0;
+  border-radius: 16px;
+  margin-bottom: 16px;
+}
+
+.project-card h2 {
+  font-size: 20px;
+  font-weight: 600;
+  text-align: center;
+  margin: 0 0 8px 0;
+  transition: opacity 0.3s ease;
+}
+
+.project-card p {
+  font-size: 16px;
+  color: #666;
+  text-align: center;
+  margin: 0;
+  line-height: 1.4;
+  transition: opacity 0.3s ease;
+}
+
+.project-card:hover .project-content h2,
+.project-card:hover .project-content p {
+  opacity: 0;
+}
+
+/* New expanded content styles */
+.expanded-content {
+  position: absolute;
+  top: 16px;
+  left: 600px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  height: calc(100% - 32px);
+  width: calc(100% - 616px);
+}
+
+.expanded-content h2,
+.expanded-content p,
+.expanded-content .view-button {
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  text-align: left;
+}
+
+.project-card:hover .expanded-content {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.project-card:hover .expanded-content h2 {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.1s;
+}
+
+.project-card:hover .expanded-content p:nth-child(2) {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.2s;
+}
+
+.project-card:hover .expanded-content p:nth-child(3) {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.3s;
+}
+
+.project-card:hover .expanded-content p:nth-child(4) {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.4s;
+}
+
+.view-button {
+  position: absolute;
+  bottom: 16px;
+  right: 16px;
+  padding: 10px 20px;
+  border: 1px solid #4f4f4f;
+  border-radius: 4px;
+  transition: all 0.2s ease-in;
+  overflow: hidden;
+  font-size: 16px;
+  cursor: pointer;
+  color: black;
+  z-index: 1;
+  text-decoration: none;
+  opacity: 0;
+  transform: translateY(-20px);
+}
+
+.project-card:hover .expanded-content .view-button {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.5s;
+}
+
+.view-button:before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%) scaleY(1) scaleX(1.25);
+  top: 100%;
+  width: 140%;
+  height: 180%;
+  background-color: rgba(0, 0, 0, 0.05);
+  border-radius: 50%;
+  display: block;
+  transition: all 0.5s 0.1s cubic-bezier(0.55, 0, 0.1, 1);
+  z-index: -1;
+}
+
+.view-button:after {
+  content: "";
+  position: absolute;
+  left: 55%;
+  transform: translateX(-50%) scaleY(1) scaleX(1.45);
+  top: 180%;
+  width: 160%;
+  height: 190%;
+  background-color: #000000;
+  border-radius: 50%;
+  display: block;
+  transition: all 0.5s 0.1s cubic-bezier(0.55, 0, 0.1, 1);
+  z-index: -1;
+}
+
+.view-button:hover {
+  color: #ffffff;
+  border: 1px solid #000000;
+}
+
+.view-button:hover:before {
+  top: -35%;
+  background-color: #000000;
+  transform: translateX(-50%) scaleY(1.3) scaleX(0.8);
+}
+
+.view-button:hover:after {
+  top: -45%;
+  background-color: #000000;
+  transform: translateX(-50%) scaleY(1.3) scaleX(0.8);
 }
