@@ -1,0 +1,15 @@
+.fade-in-section {
+  will-change: opacity, transform;
+  transition: none; /* Remove transition to make it purely scroll-based */
+}
+
+.fade-in-section.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Ensure elements above viewport fade in when scrolling up */
+.fade-in-section:not(.is-visible) {
+  opacity: 0;
+  transform: translateY(-30px); /* Negative value for upward movement */
+} 
