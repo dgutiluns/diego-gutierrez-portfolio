@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import './App.css';
-import { BrowserRouter as Router, Routes, Route, useNavigate, Link } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route, useNavigate, Link } from 'react-router-dom';
 import AnalyticsDashboard from './pages/AnalyticsDashboard';
 import AutomatedEmail from './pages/AutomatedEmail';
 /*import FadeInSection from './components/FadeInSection'; */
