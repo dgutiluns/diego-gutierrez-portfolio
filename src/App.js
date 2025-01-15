@@ -116,7 +116,7 @@ function MainContent() {
                 <p>Full Stack Web Development</p>
                 <p>Summer 2024</p>
                 <p>A comprehensive analytics dashboard built to visualize and track key business metrics. Features interactive charts, real-time data updates, and customizable views for different user roles.</p>
-                <Link to="/#/analytics-dashboard" className="view-button">View</Link>
+                <Link to="#/analytics-dashboard" className="view-button">View</Link>
               </div>
             </div>
             <div className="project-card">
@@ -141,7 +141,7 @@ function MainContent() {
                 <p>Backend Development & Automation</p>
                 <p>Summer 2024</p>
                 <p>An intelligent email automation system that handles scheduling, personalization, and delivery of mass communications. Includes template management, analytics tracking, and integration with existing workflows.</p>
-                <Link to="/#/automated-email" className="view-button">View</Link>
+                <Link to="#/automated-email" className="view-button">View</Link>
               </div>
             </div>
           </div>
