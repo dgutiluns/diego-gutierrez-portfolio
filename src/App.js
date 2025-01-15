@@ -1,7 +1,8 @@
 import React, { useEffect, useRef, useState } from 'react';
 import './App.css';
-import { BrowserRouter as Router, Routes, Route, useNavigate } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, useNavigate, Link } from 'react-router-dom';
 import AnalyticsDashboard from './pages/AnalyticsDashboard';
+import AutomatedEmail from './pages/AutomatedEmail';
 /*import FadeInSection from './components/FadeInSection'; */
 
 // Create a separate component for your main content
@@ -140,73 +141,90 @@ function MainContent() {
                 <p>Backend Development & Automation</p>
                 <p>Summer 2024</p>
                 <p>An intelligent email automation system that handles scheduling, personalization, and delivery of mass communications. Includes template management, analytics tracking, and integration with existing workflows.</p>
-                <a href="#" className="view-button">View</a>
+                <a href="/automated-email" className="view-button">View</a>
               </div>
             </div>
           </div>
         </div>
       </FadeInSection>
 
-      <FadeInSection>
-        <div className="about-section">
-          <div className="content">
-            <h1>Me</h1>
-            <p>Hi, I am an aspiring data scientist and passionate for identifying and solving challenging problems through data driven insights. I am currently studying at UC Berkeley and am continuing to gain skills in programming, data science, machine learning.</p>
-            <p>I'm an international student born in Bolivia but grew up in Ghana, Tanzania, and South Africa. My life is currently fuelled by my three g's: golf, guitar, and gym.</p>
-            <p>I've built this portfolio to showcase the projects that I am most proud of and that demonstrate my ability to apply technological, statistical, analytical, and organisational skills.</p>
-          </div>
-          <div className="image-container">
-            <div className="image-wrapper top-image">
-              <div className="image-flipper">
-                <span className="hover-label">Hover me</span>
-                <img 
-                  src={`${process.env.PUBLIC_URL}/farm.png`}
-                  alt="Farm"
-                  className="background-image"
-                />
-                <div className="image-back">
-                  <div className="back-content">
-                    <div className="empty-message">
-                      <h2>Whoops, nothing here, try below me...</h2>
+      <section className="about-section">
+        <div className="about-content">
+          <h1>Me</h1>
+          <p>
+            Hi, I am an aspiring data scientist and passionate for identifying and 
+            solving challenging problems through data driven insights. I am 
+            currently studying at UC Berkeley and am continuing to gain skills in 
+            programming, data science, machine learning.
+          </p>
+          <p>
+            I'm an international student born in Bolivia but grew up in Ghana, 
+            Tanzania, and South Africa. My life is currently fuelled by golf, guitar, 
+            and gym.
+          </p>
+          <p>
+            I've built this portfolio to showcase the projects that I am most 
+            proud of and that demonstrate my ability to apply technological, 
+            statistical, analytical, and organisational skills.
+          </p>
+        </div>
+        
+        <div className="about-images">
+          <div className="profile-image">
+            <div className="image-flipper">
+              <span className="hover-label">Hover me</span>
+              <img 
+                src={`${process.env.PUBLIC_URL}/couple.png`}
+                alt="Couple" 
+                className="background-image"
+              />
+              <div className="image-back">
+                <div className="back-content">
+                  <div className="resume-content">
+                    <h2>Relevant Coursework</h2>
+                    <p className="university">UC Berkeley</p>
+                    <div className="courses-container">
+                      <p>Foundations of Data Science</p>
+                      <p>Intro to Programming</p>
+                      <p>Data Structures and Algorithms</p>
+                      <p>Calculus 1 and 2</p>
+                      <p>Linear Algebra</p>
+                      <p>Introduction to Probability and Statistics</p>
+                      <p>Technology, Innovation, and Entrepreneurship</p>
+                    </div>
+                    <p className="university">Johns Hopkins University</p>
+                    <div className="courses-container">
+                      <p>Data Science Tool Box</p>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-            <div className="image-wrapper bottom-image">
-              <div className="image-flipper">
-                <span className="hover-label">Hover me</span>
-                <img 
-                  src={`${process.env.PUBLIC_URL}/couple.png`}
-                  alt="About Me"
-                  className="background-image"
-                />
-                <div className="image-back">
-                  <div className="back-content">
-                    <div className="resume-content">
-                      <h2>Relevant Coursework</h2>
-                      <p className="university">UC Berkeley</p>
-                      <div className="courses-container">
-                        <p>Foundations of Data Science</p>
-                        <p>Intro to Programming</p>
-                        <p>Data Structures and Algorithms</p>
-                        <p>Calculus 1 and 2</p>
-                        <p>Linear Algebra</p>
-                        <p>Introduction to Probability and Statistics</p>
-                        <p>Technology, Innovation, and Entrepreneurship</p>
-                      </div>
-                      <p className="university">Johns Hopkins University</p>
-                      <div className="courses-container">
-                        <p>Data Science Tool Box</p>
-                      </div>
-                    </div>
+          </div>
+          
+          <div className="profile-image">
+            <div className="image-flipper">
+              <img 
+                src={`${process.env.PUBLIC_URL}/farm.png`}
+                alt="Farm" 
+                className="background-image"
+              />
+              <div className="image-back">
+                <div className="back-content">
+                  <div className="frog-message">
+                    <h2>I didn't say "Hover Me"</h2>
+                    <img 
+                      src={`${process.env.PUBLIC_URL}/frog.png`}
+                      alt="Frog" 
+                      className="frog-image"
+                    />
                   </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </FadeInSection>
+      </section>
     </div>
   );
 }
@@ -254,6 +272,7 @@ function App() {
       <Routes>
         <Route path="/" element={<MainContent />} />
         <Route path="/analytics-dashboard" element={<AnalyticsDashboard />} />
+        <Route path="/automated-email" element={<AutomatedEmail />} />
       </Routes>
     </Router>
   );

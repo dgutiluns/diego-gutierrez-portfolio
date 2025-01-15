@@ -141,7 +141,9 @@
   .tech-icon[alt="Python"],
   .tech-icon[alt="React"],
   .tech-icon[alt="MongoDB"],
-  .tech-icon[alt="JavaScript"] {
+  .tech-icon[alt="JavaScript"],
+  .tech-icon[alt="AWS"]
+  {
     border: 1px solid black;
     border-radius: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
@@ -210,3 +212,17 @@
     opacity: 0;
     animation: fadeInBlur 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.4s forwards;
   }
+  
+  .email-image-container {
+    width: 150%;
+    margin-left: -25%;
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+  
+  .email-image {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+  } 

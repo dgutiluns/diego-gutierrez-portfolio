@@ -163,7 +163,7 @@ function AnalyticsDashboard() {
 
       {/* Back Button Section */}
       <div className="back-button-container">
-        <Link to="/" className="back-button">
+        <Link to="/" className="back-button" onClick={() => window.scrollTo(0, 0)}>
           Back to Projects
         </Link>
       </div>
