@@ -45,7 +45,7 @@ function AutomatedEmail() {
       <div className="media-section">
         <div className="project-media">
           <video className="project-video" autoPlay loop muted playsInline>
-            <source src="/auto_email.mp4" type="video/mp4" />
+            <source src={`${process.env.PUBLIC_URL}/Email_System.mp4`} type="video/mp4" />
             Your browser does not support the video tag.
           </video>
         </div>
@@ -82,7 +82,7 @@ function AutomatedEmail() {
       <div className="content-section">
         <div className="email-image-container">
           <img 
-            src="/email_pic.png" 
+            src={`${process.env.PUBLIC_URL}/email_pic.png`} 
             alt="Email System" 
             className="email-image"
           />
@@ -97,7 +97,7 @@ function AutomatedEmail() {
         <div className="two-column-content">
           <div className="column">
             <div className="tech-icons">
-              <img src="/python.png" alt="Python" className="tech-icon" />
+              <img src={`${process.env.PUBLIC_URL}/python.png`} alt="Python" className="tech-icon" />
             </div>
             <h3>Data Cleaning and Filtering</h3>
             <p>
@@ -110,7 +110,7 @@ function AutomatedEmail() {
           </div>
           <div className="column">
             <div className="tech-icons">
-              <img src="/aws.png" alt="AWS" className="tech-icon" />
+              <img src={`${process.env.PUBLIC_URL}/aws.png`} alt="AWS" className="tech-icon" />
             </div>
             <h3>Design and Presentation</h3>
             <p>

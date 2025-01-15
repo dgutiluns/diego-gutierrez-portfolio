@@ -45,7 +45,7 @@ function AnalyticsDashboard() {
       <div className="media-section">
         <div className="project-media">
           <video className="project-video" autoPlay loop muted playsInline>
-            <source src="/Apollo_Dashboard.mp4" type="video/mp4" />
+            <source src={`${process.env.PUBLIC_URL}/Apollo_Dashboard.mp4`} type="video/mp4" />
             Your browser does not support the video tag.
           </video>
         </div>
@@ -115,7 +115,7 @@ function AnalyticsDashboard() {
           <div className="column">
             <div className="tech-icons">
               <img src="/mongo.png" alt="MongoDB" className="tech-icon" />
-              <img src="/python.png" alt="Python" className="tech-icon" />
+              <img src={`${process.env.PUBLIC_URL}/python.png`} alt="Python" className="tech-icon" />
             </div>
             <h3>Backend</h3>
             <p>
@@ -125,7 +125,7 @@ function AnalyticsDashboard() {
           <div className="column">
             <div className="tech-icons">
               <img src="/javascript.png" alt="JavaScript" className="tech-icon" />
-              <img src="/react.png" alt="React" className="tech-icon" />
+              <img src={`${process.env.PUBLIC_URL}/react.png`} alt="React" className="tech-icon" />
             </div>
             <h3>Frontend</h3>
             <p>
