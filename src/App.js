@@ -101,7 +101,7 @@ function MainContent() {
                     loop 
                     muted 
                     playsInline
-                    className="project-video"
+                    className="project-video-App"
                   >
                     <source src="/Apollo_Dashboard.mp4" type="video/mp4" />
                     Your browser does not support the video tag.
@@ -126,7 +126,7 @@ function MainContent() {
                     loop 
                     muted 
                     playsInline
-                    className="project-video"
+                    className="project-video-App"
                   >
                     <source src="/auto_email.mp4" type="video/mp4" />
                     Your browser does not support the video tag.
