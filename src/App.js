@@ -161,7 +161,7 @@ function MainContent() {
               <div className="project-content">
                 <div className="project-image">
                   <img 
-                    src={`${process.env.PUBLIC_URL}/heart_disease.png`}
+                    src={process.env.PUBLIC_URL + '/heart_cover.png'}
                     alt="Heart Disease Prediction Project"
                     className="project-image-App"
                   />
