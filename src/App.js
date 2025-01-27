@@ -3,6 +3,7 @@ import './App.css';
 import { HashRouter as Router, Routes, Route, useNavigate, Link } from 'react-router-dom';
 import AnalyticsDashboard from './pages/AnalyticsDashboard';
 import AutomatedEmail from './pages/AutomatedEmail';
+import HeartDiseasePrediction from './pages/HeartDiseasePrediction';
 /*import FadeInSection from './components/FadeInSection'; */
 
 // Create a separate component for your main content
@@ -156,6 +157,32 @@ function MainContent() {
                 </Link>
               </div>
             </div>
+            <div className="project-card">
+              <div className="project-content">
+                <div className="project-image">
+                  <img 
+                    src={`${process.env.PUBLIC_URL}/heart_disease.png`}
+                    alt="Heart Disease Prediction Project"
+                    className="project-image-App"
+                  />
+                </div>
+                <h2>Heart Disease Prediction Model</h2>
+                <p>Data-driven healthcare insights through machine learning</p>
+              </div>
+              <div className="expanded-content">
+                <h2>Heart Disease Prediction Model</h2>
+                <p>Data Science & Machine Learning</p>
+                <p>2024</p>
+                <p>A comprehensive analysis of heart disease data using logistic regression. Features include data preprocessing, feature engineering, and model evaluation with ROC-AUC curves. The project demonstrates practical applications of statistical methods in healthcare predictions.</p>
+                <Link 
+                  to="/heart-disease-prediction" 
+                  className="view-button"
+                  onClick={() => window.scrollTo(0, 0)}
+                >
+                  View
+                </Link>
+              </div>
+            </div>
           </div>
         </div>
       </FadeInSection>
@@ -285,6 +312,7 @@ function App() {
         <Route path="/" element={<MainContent />} />
         <Route path="/analytics-dashboard" element={<AnalyticsDashboard />} />
         <Route path="/automated-email" element={<AutomatedEmail />} />
+        <Route path="/heart-disease-prediction" element={<HeartDiseasePrediction />} />
       </Routes>
     </Router>
   );

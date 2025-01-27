@@ -45,7 +45,7 @@ function AutomatedEmail() {
       <div className="media-section">
         <div className="project-media">
           <video className="project-video" autoPlay loop muted playsInline>
-            <source src={`${process.env.PUBLIC_URL}/Email_System.mp4`} type="video/mp4" />
+            <source src={`${process.env.PUBLIC_URL}/auto_email.mp4`} type="video/mp4" />
             Your browser does not support the video tag.
           </video>
         </div>
