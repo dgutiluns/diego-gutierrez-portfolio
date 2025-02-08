@@ -847,3 +847,23 @@ h1 {
   object-fit: cover;
   border-radius: 10px;
 }
+
+.section-subtitle-software {
+  font-size: 30px;
+  color: #666;
+  margin: 40px 0 20px 16rem;
+  font-weight: 600;
+  text-align: left;
+}
+
+.section-subtitle-data {
+  font-size: 30px;
+  color: #666;
+  margin: -100px 0 20px 16rem;  /* Added top margin to create space between sections */
+  font-weight: 600;
+  text-align: left;
+}
+
+.project-container {
+  margin-bottom: 40px;  /* Reduced space between containers */
+}
