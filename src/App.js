@@ -4,6 +4,7 @@ import { HashRouter as Router, Routes, Route, useNavigate, Link } from 'react-ro
 import AnalyticsDashboard from './pages/AnalyticsDashboard';
 import AutomatedEmail from './pages/AutomatedEmail';
 import HeartDiseasePrediction from './pages/HeartDiseasePrediction';
+import CustomerChurn from './pages/CustomerChurn';
 /*import FadeInSection from './components/FadeInSection'; */
 
 // Create a separate component for your main content
@@ -190,6 +191,32 @@ function MainContent() {
                 </Link>
               </div>
             </div>
+            <div className="project-card">
+              <div className="project-content">
+                <div className="project-image">
+                  <img 
+                    src={process.env.PUBLIC_URL + '/churn_pic.png'}
+                    alt="Customer Churn Prediction Project"
+                    className="project-image-App"
+                  />
+                </div>
+                <h2>Customer Churn Model</h2>
+                <p>Machine learning for customer retention optimization</p>
+              </div>
+              <div className="expanded-content">
+                <h2>Customer Churn Model</h2>
+                <p>Data Science & Machine Learning</p>
+                <p>2024</p>
+                <p>A comprehensive churn prediction system using XGBoost, achieving 93% accuracy through iterative model improvements and advanced feature engineering techniques.</p>
+                <Link 
+                  to="/customer-churn" 
+                  className="view-button"
+                  onClick={() => window.scrollTo(0, 0)}
+                >
+                  View
+                </Link>
+              </div>
+            </div>
           </div>
         </div>
       </FadeInSection>
@@ -320,6 +347,7 @@ function App() {
         <Route path="/analytics-dashboard" element={<AnalyticsDashboard />} />
         <Route path="/automated-email" element={<AutomatedEmail />} />
         <Route path="/heart-disease-prediction" element={<HeartDiseasePrediction />} />
+        <Route path="/customer-churn" element={<CustomerChurn />} />
       </Routes>
     </Router>
   );
