@@ -5,6 +5,7 @@ import AnalyticsDashboard from './pages/AnalyticsDashboard';
 import AutomatedEmail from './pages/AutomatedEmail';
 import HeartDiseasePrediction from './pages/HeartDiseasePrediction';
 import CustomerChurn from './pages/CustomerChurn';
+import ComputerVisionSoccerCommentator from './pages/ComputerVisionSoccerCommentator';
 /*import FadeInSection from './components/FadeInSection'; */
 
 // Create a separate component for your main content
@@ -165,6 +166,32 @@ function MainContent() {
         <div className="projects-section">
           <h2 className="section-subtitle-data">Data Science</h2>
           <div className="projects-container">
+            <div className="project-card">
+              <div className="project-content">
+                <div className="project-image">
+                  <img 
+                    src={process.env.PUBLIC_URL + '/build/comm_heroimage.png'}
+                    alt="Computer Vision Soccer Commentator"
+                    className="project-image-App"
+                  />
+                </div>
+                <h2>Computer Vision Soccer Commentator</h2>
+                <p>End-to-end CV pipeline for players, ball, field geometry, and commentary scaffolding</p>
+              </div>
+              <div className="expanded-content">
+                <h2>Computer Vision Soccer Commentator</h2>
+                <p>Computer Vision & Machine Learning</p>
+                <p>2025</p>
+                <p>An end-to-end, modular computer-vision pipeline for soccer: player and ball detection, ByteTrack identity tracking, field segmentation with homography, and scaffolds for event understanding and AI commentary.</p>
+                <Link 
+                  to="/computer-vision-soccer-commentator" 
+                  className="view-button"
+                  onClick={() => window.scrollTo(0, 0)}
+                >
+                  View
+                </Link>
+              </div>
+            </div>
             <div className="project-card">
               <div className="project-content">
                 <div className="project-image">
@@ -348,6 +375,7 @@ function App() {
         <Route path="/automated-email" element={<AutomatedEmail />} />
         <Route path="/heart-disease-prediction" element={<HeartDiseasePrediction />} />
         <Route path="/customer-churn" element={<CustomerChurn />} />
+        <Route path="/computer-vision-soccer-commentator" element={<ComputerVisionSoccerCommentator />} />
       </Routes>
     </Router>
   );
