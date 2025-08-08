@@ -118,7 +118,7 @@ function ComputerVisionSoccerCommentator() {
             <div className="media-section">
               <div className="project-image-container">
                 <img
-                  src={`${process.env.PUBLIC_URL}/build/comm_heroimage.png`}
+                  src={`${process.env.PUBLIC_URL}/comm_heroimage.png`}
                   alt="Computer Vision Soccer Commentator Hero"
                   className="project-header-image"
                 />
@@ -189,8 +189,16 @@ function ComputerVisionSoccerCommentator() {
                   of ByteTrack (kept as deprecated for reference).
                 </p>
                 <div className="analysis-image-container">
-                  <video className="analysis-image" controls>
-                    <source src={`${process.env.PUBLIC_URL}/build/player_tracking_bytetrack_comparison_portfolio.mp4`} type="video/mp4" />
+                  <video 
+                    className="analysis-image" 
+                    controls 
+                    preload="metadata" 
+                    muted
+                    onError={(e) => console.error('Video error:', e)}
+                    onLoadStart={() => console.log('Video loading started')}
+                    onCanPlay={() => console.log('Video can play')}
+                  >
+                    <source src={`${process.env.PUBLIC_URL}/player_tracking_bytetrack_comparison_portfolio_standard.mp4`} type="video/mp4" />
                     Your browser does not support the video tag.
                   </video>
                 </div>
@@ -209,19 +217,19 @@ function ComputerVisionSoccerCommentator() {
                 </p>
                 <div className="two-image-grid">
                   <img
-                    src={`${process.env.PUBLIC_URL}/build/frame_0060_overlay_portfolio.jpg`}
+                    src={`${process.env.PUBLIC_URL}/overlay_frame_0060_portfolio.png`}
                     alt="Overlay Example"
                     className="analysis-image"
                   />
                   <img
-                    src={`${process.env.PUBLIC_URL}/build/frame_0070_mask_portfolio.png`}
+                    src={`${process.env.PUBLIC_URL}/frame_0070_mask_portfolio.png`}
                     alt="Mask Example"
                     className="analysis-image"
                   />
                 </div>
                 <div className="analysis-image-container">
                   <img
-                    src={`${process.env.PUBLIC_URL}/build/frame_0010_corner_detection_portfolio.png`}
+                    src={`${process.env.PUBLIC_URL}/frame_0010_corner_detection_portfolio.png`}
                     alt="Corner Detection"
                     className="analysis-image"
                   />
@@ -277,14 +285,24 @@ function ComputerVisionSoccerCommentator() {
                   <div className="line"></div>
                 </div>
                 <div className="underline"></div>
-                <ul className="section-text">
-                  <li><strong>Environment & Imports:</strong> standardized sys.path inserts and absolute model paths.</li>
-                  <li><strong>Roboflow API Robustness:</strong> cleaned .env, proper headers, and defensive temp-file handling.</li>
-                  <li><strong>Video Output Reliability:</strong> codec issues resolved with FFmpeg concat and image-pattern flows.</li>
-                  <li><strong>Homography Mapping:</strong> corrected input shapes and added grid visualization diagnostics.</li>
-                  <li><strong>JSON Serialization:</strong> safe conversion to native Python types before dump.</li>
-                  <li><strong>Corner Detection Robustness:</strong> internal-line filtering, improved scoring & side grouping, relaxed thresholds when needed.</li>
-                </ul>
+                <p className="section-text">
+                  The development process was marked by several significant challenges that required creative solutions. Environment and import issues were among the first obstacles—the ModuleNotFoundError for the src module was a recurring problem that required systematic path management. I standardized sys.path inserts in tests and implemented absolute model paths to ensure consistent behavior across different execution contexts.
+                </p>
+                <p className="section-text">
+                  Roboflow API integration presented multiple layers of complexity. Initial issues with malformed .env files and missing Content-Type headers required careful debugging and robust error handling. The solution involved clean key-value environment files, defensive temporary file management with proper flush and sync operations, and comprehensive error handling that gracefully degrades when API calls fail.
+                </p>
+                <p className="section-text">
+                  Video output reliability became a significant challenge as the system grew more complex. Green frames and writer failures with certain codecs required a multi-layered approach. I experimented with multiple codec options before implementing an FFmpeg-based solution that provides deterministic video creation from saved frame sequences.
+                </p>
+                <p className="section-text">
+                  Homography mapping required mathematical precision—the OpenCV transform assertion errors were caused by incorrect input shapes. The solution involved standardizing point reshaping to the correct format and adding grid visualization capabilities to validate results visually.
+                </p>
+                <p className="section-text">
+                  JSON serialization issues with NumPy types required careful attention to data type conversion. The system now safely converts int64 and float64 types to native Python types before serialization, ensuring that all outputs are properly formatted for analysis and debugging.
+                </p>
+                <p className="section-text">
+                  Perhaps the most complex challenge was corner detection robustness. Internal field markings were being misclassified as boundaries, and some frames had insufficient vertical line detection. The solution involved explicit internal-line filtering, improved confidence scoring, better side grouping algorithms, and relaxed thresholds when appropriate. Comprehensive visual debug overlays make it easy to understand when and why the system fails.
+                </p>
               </div>
 
               <div id="evaluation-deliverables" className="content-section section-anchor">
@@ -324,12 +342,12 @@ function ComputerVisionSoccerCommentator() {
                   <div className="line"></div>
                 </div>
                 <div className="underline"></div>
-                <ul className="section-text">
-                  <li>Player detection/tracking: production path set (Roboflow + ByteTrack).</li>
-                  <li>Ball detection: custom YOLOv8 integrated; Roboflow model used for comparison only.</li>
-                  <li>Field detection/homography: active area of improvement with visual diagnostics and tests in place.</li>
-                  <li>Orchestration: main_pipeline.py processes videos end-to-end and writes annotated video + per-frame JSON.</li>
-                </ul>
+                <p className="section-text">
+                  The system has reached a stable state with several components in production. Player detection and tracking using Roboflow + ByteTrack is the established path, providing reliable performance across varied conditions. Ball detection with the custom YOLOv8 model is integrated into the main pipeline, with Roboflow alternatives available for comparison.
+                </p>
+                <p className="section-text">
+                  Field detection and homography estimation are active areas of improvement. The corner and line detection visualizations are in place, and homography mapping has been verified with corrected transforms. The orchestration system in main_pipeline.py processes videos end-to-end for players and ball detection, producing annotated videos and per-frame JSON logs.
+                </p>
               </div>
 
               <div id="next-steps" className="content-section section-anchor">

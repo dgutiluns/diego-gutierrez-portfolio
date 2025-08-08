@@ -49,6 +49,17 @@
 .section-text {
   margin-bottom: 1.5rem;
   line-height: 1.4;
+  color: #666;
+}
+
+.section-text ul {
+  padding-left: 0;
+  margin-left: 0;
+}
+
+.section-text li {
+  margin-bottom: 0.5rem;
+  color: #666;
 }
 
 .project-container {
@@ -185,6 +196,17 @@
   max-width: 100%;
   height: auto;
   border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.analysis-image-container video {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  object-fit: fill;
+  max-height: 400px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
 .hover-shadow {

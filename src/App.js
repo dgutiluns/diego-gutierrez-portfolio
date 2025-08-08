@@ -170,7 +170,7 @@ function MainContent() {
               <div className="project-content">
                 <div className="project-image">
                   <img 
-                    src={process.env.PUBLIC_URL + '/build/comm_heroimage.png'}
+                    src={process.env.PUBLIC_URL + '/comm_heroimage.png'}
                     alt="Computer Vision Soccer Commentator"
                     className="project-image-App"
                   />
