@@ -45,7 +45,7 @@ function AnalyticsDashboard() {
       <div className="media-section">
         <div className="project-media">
           <video className="project-video" autoPlay loop muted playsInline>
-            <source src={`${process.env.PUBLIC_URL}/Apollo_Dashboard.mp4`} type="video/mp4" />
+            <source src={`${process.env.PUBLIC_URL}/new_dashboard.mp4`} type="video/mp4" />
             Your browser does not support the video tag.
           </video>
         </div>
@@ -101,7 +101,7 @@ function AnalyticsDashboard() {
       <div className="content-section">
         <div className="video-placeholder">
           <video className="project-video" autoPlay loop muted playsInline>
-            <source src={`${process.env.PUBLIC_URL}/Apollo_Graphs.mp4`} type="video/mp4" />
+            <source src={`${process.env.PUBLIC_URL}/new_dashboard_2.mp4`} type="video/mp4" />
             Your browser does not support the video tag.
           </video>
         </div>

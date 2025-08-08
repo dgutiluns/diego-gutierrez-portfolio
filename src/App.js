@@ -53,12 +53,24 @@ function MainContent() {
                       <span className="back-title">Work Experience</span>
                       <div className="description-frame">
                         <p className="back-description">
-                          <a href="https://apollostudios.co.za/" className="company-link">Summer 2024, Apollo Studios</a> - 
-                          Developed an automated email system to streamline communication processes and developed and intern anlicts dasboard to visualize and analyze key business metrics.
+                          <a href="https://www.coca-colacompany.com/" className="company-link">May 2025 – Aug 2025, The Coca-Cola Company</a> - 
+                          Revenue Growth Management (Data Science) Intern. Automated post-processing of internal ML pricing optimization outputs using Python/Pandas on Azure Databricks, reducing manual analysis by 80%. Conducted extensive EDA on large bottler datasets, designing custom weighted scoring systems for promotion effectiveness using Power BI (DAX), leading to 15% ROI improvements.
                         </p>
                         <p className="back-description experience-item">
-                          <a href="https://www.vodacom.co.za/" className="company-link">Summer 2024, Vodacom</a> - 
-                          Worked alongside industry experts to develop machine learning models to predict customer churn and improve customer retention.
+                          <a href="https://www.seagate.com/" className="company-link">Jan 2025 – May 2025, Seagate</a> - 
+                          Data Consultant. Designed and implemented automated ETL pipelines to streamline financial data processing, integrating should-cost models and historical trends. Developed interactive financial dashboards using Tableau, SQL, and Python, enabling real-time sensitivity analysis and cost modeling for corporate finance teams.
+                        </p>
+                        <p className="back-description experience-item">
+                          <span className="company-link">Jan 2025 – May 2025, SureBet Jobs</span> - 
+                          Full Stack Developer Intern. Developed dedicated job details page using PHP (backend) and HTML (frontend), enabling job listings via unique URLs with dynamic data retrieval from MySQL database. Designed UI mockups in Figma and implemented JavaScript-powered "Copy Link" feature for enhanced job visibility and sharing.
+                        </p>
+                        <p className="back-description experience-item">
+                          <a href="https://apollostudios.co.za/" className="company-link">July 2024 – Aug 2024, Apollo Studios</a> - 
+                          Data and Product Intern. Developed data-driven program tracking performance metrics for 100+ active robots, generating automated email reports for 30+ clients, increasing customer trust and loyalty by 30% and 50% respectively. Designed and launched Tableau internal analytics dashboard, reducing manual reporting efforts by 40%.
+                        </p>
+                        <p className="back-description experience-item">
+                          <a href="https://www.vodacom.co.za/" className="company-link">May 2024 – June 2024, Vodacom Group Ltd.</a> - 
+                          Data Science Intern. Implemented and fine-tuned fraud detection models using random forests and XGBoost, leveraging mobile device identification and clustering, reducing customer service losses by 10%. Exposed to advanced customer segmentation strategies including RFM analysis and propensity modeling for churn models.
                         </p>
                       </div>
                     </div>
@@ -81,7 +93,7 @@ function MainContent() {
                       <span className="back-title">Skills</span>
                       <div className="description-frame">
                         <p className="back-description">
-                          Python, R, SQL, Data Visualization, JavaScript, React, Automation, Statistical Analysis, TensorFlow, PyTorch, Git, AWS, Excel, Power BI, Figma.
+                          Python, SQL, R, React, Java, Pandas, Scikit-learn, TensorFlow, OpenCV, PyTorch, Time Series, Excel, Power BI, Tableau, AWS, Azure, Data Scraping, Selenium, Data Processing, Engineering, Mining and Analytics, A/B Testing, Figma.
                         </p>
                       </div>
                     </div>
@@ -108,7 +120,7 @@ function MainContent() {
                     playsInline
                     className="project-video-App"
                   >
-                    <source src={`${process.env.PUBLIC_URL}/Apollo_Dashboard.mp4`} type="video/mp4" />
+                    <source src={`${process.env.PUBLIC_URL}/new_dashboard.mp4`} type="video/mp4" />
                     Your browser does not support the video tag.
                   </video>
                 </div>
