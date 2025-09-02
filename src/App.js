@@ -1,19 +1,22 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React from 'react';
 import './App.css';
-import { HashRouter as Router, Routes, Route, useNavigate, Link } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import AnalyticsDashboard from './pages/AnalyticsDashboard';
 import AutomatedEmail from './pages/AutomatedEmail';
 import HeartDiseasePrediction from './pages/HeartDiseasePrediction';
 import CustomerChurn from './pages/CustomerChurn';
 import ComputerVisionSoccerCommentator from './pages/ComputerVisionSoccerCommentator';
-/*import FadeInSection from './components/FadeInSection'; */
+import Chatbot from './components/Chatbot';
+import FloatingOrbs from './components/FloatingOrbs';
+import FadeInSection from './components/FadeInSection';
 
 // Create a separate component for your main content
 function MainContent() {
-  const navigate = useNavigate();
-  
   return (
     <div className="App">
+      {/* Floating Orbs Background */}
+      <FloatingOrbs position="top" />
+      
       <FadeInSection>
         <div className="main-content-section">
           <div className="content">
@@ -107,6 +110,8 @@ function MainContent() {
 
       <FadeInSection>
         <div className="projects-section">
+          {/* Additional background shapes for projects section */}
+          <FloatingOrbs position="middle" />
           <h1>Projects</h1>
           <h2 className="section-subtitle-software">Software</h2>
           <div className="projects-container">
@@ -261,6 +266,8 @@ function MainContent() {
       </FadeInSection>
 
       <section className="about-section">
+        {/* Additional background shapes for about section */}
+        <FloatingOrbs position="bottom" />
         <div className="about-content">
           <h1>Me</h1>
           <p>
@@ -337,45 +344,14 @@ function MainContent() {
           </div>
         </div>
       </section>
+      
+      {/* AI Chatbot */}
+      <Chatbot />
     </div>
   );
 }
 
-function FadeInSection(props) {
-  const [isVisible, setVisible] = useState(false);
-  const domRef = useRef();
 
-  useEffect(() => {
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        setVisible(entry.isIntersecting);
-      });
-    }, {
-      threshold: [0, 0.1, 0.2, 0.3, 0.4, 0.5],
-      rootMargin: "-50px"
-    });
-    
-    const currentRef = domRef.current;
-    if (currentRef) {
-      observer.observe(currentRef);
-    }
-
-    return () => {
-      if (currentRef) {
-        observer.unobserve(currentRef);
-      }
-    };
-  }, []);
-
-  return (
-    <div
-      className={`fade-in-section ${isVisible ? 'is-visible' : ''}`}
-      ref={domRef}
-    >
-      {props.children}
-    </div>
-  );
-}
 
 // Main App component with routing
 function App() {

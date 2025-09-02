@@ -1,0 +1,156 @@
+{
+  "personal_info": {
+    "name": "Diego Gutierrez",
+    "title": "Data Science and Economics Student",
+    "university": "UC Berkeley",
+    "email": "dgutiluns@gmail.com",
+    "linkedin": "https://www.linkedin.com/in/diego-gutierrez-06487020a/",
+    "github": "https://github.com",
+    "location": "International student from Bolivia, grew up in Ghana, Tanzania, and South Africa",
+    "interests": ["golf", "guitar", "gym"],
+    "about": "I am an aspiring data scientist passionate about identifying and solving challenging problems through data-driven insights. I'm currently studying at UC Berkeley and continuing to gain skills in programming, data science, and machine learning."
+  },
+  "education": {
+    "current": {
+      "institution": "UC Berkeley",
+      "degree": "Data Science and Economics",
+      "status": "Currently studying"
+    },
+    "courses": {
+      "uc_berkeley": [
+        "Foundations of Data Science",
+        "Intro to Programming",
+        "Data Structures and Algorithms",
+        "Calculus 1 and 2",
+        "Linear Algebra",
+        "Introduction to Probability and Statistics",
+        "Technology, Innovation, and Entrepreneurship"
+      ],
+      "johns_hopkins": [
+        "Data Science Tool Box"
+      ]
+    }
+  },
+  "work_experience": [
+    {
+      "company": "The Coca-Cola Company",
+      "position": "Revenue Growth Management (Data Science) Intern",
+      "duration": "May 2025 – Aug 2025",
+      "url": "https://www.coca-colacompany.com/",
+      "achievements": [
+        "Automated post-processing of internal ML pricing optimization outputs using Python/Pandas on Azure Databricks, reducing manual analysis by 80%",
+        "Conducted extensive EDA on large bottler datasets, designing custom weighted scoring systems for promotion effectiveness using Power BI (DAX), leading to 15% ROI improvements"
+      ]
+    },
+    {
+      "company": "Seagate",
+      "position": "Data Consultant",
+      "duration": "Jan 2025 – May 2025",
+      "url": "https://www.seagate.com/",
+      "achievements": [
+        "Designed and implemented automated ETL pipelines to streamline financial data processing, integrating should-cost models and historical trends",
+        "Developed interactive financial dashboards using Tableau, SQL, and Python, enabling real-time sensitivity analysis and cost modeling for corporate finance teams"
+      ]
+    },
+    {
+      "company": "SureBet Jobs",
+      "position": "Full Stack Developer Intern",
+      "duration": "Jan 2025 – May 2025",
+      "achievements": [
+        "Developed dedicated job details page using PHP (backend) and HTML (frontend), enabling job listings via unique URLs with dynamic data retrieval from MySQL database",
+        "Designed UI mockups in Figma and implemented JavaScript-powered 'Copy Link' feature for enhanced job visibility and sharing"
+      ]
+    },
+    {
+      "company": "Apollo Studios",
+      "position": "Data and Product Intern",
+      "duration": "July 2024 – Aug 2024",
+      "url": "https://apollostudios.co.za/",
+      "achievements": [
+        "Developed data-driven program tracking performance metrics for 100+ active robots, generating automated email reports for 30+ clients, increasing customer trust and loyalty by 30% and 50% respectively",
+        "Designed and launched Tableau internal analytics dashboard, reducing manual reporting efforts by 40%"
+      ]
+    },
+    {
+      "company": "Vodacom Group Ltd.",
+      "position": "Data Science Intern",
+      "duration": "May 2024 – June 2024",
+      "url": "https://www.vodacom.co.za/",
+      "achievements": [
+        "Implemented and fine-tuned fraud detection models using random forests and XGBoost, leveraging mobile device identification and clustering, reducing customer service losses by 10%",
+        "Exposed to advanced customer segmentation strategies including RFM analysis and propensity modeling for churn models"
+      ]
+    }
+  ],
+  "projects": {
+    "software": [
+      {
+        "name": "Internal Analytics Dashboard",
+        "type": "Full Stack Web Development",
+        "period": "Summer 2024",
+        "description": "A comprehensive analytics dashboard built to visualize and track key business metrics. Features interactive charts, real-time data updates, and customizable views for different user roles.",
+        "technologies": ["React", "JavaScript", "Data Visualization", "Web Development"],
+        "url": "/analytics-dashboard"
+      },
+      {
+        "name": "Automated Email System",
+        "type": "Backend Development & Automation",
+        "period": "Summer 2024",
+        "description": "An intelligent email automation system that handles scheduling, personalization, and delivery of mass communications. Includes template management, analytics tracking, and integration with existing workflows.",
+        "technologies": ["Backend", "Automation", "Email Systems", "Integration"],
+        "url": "/automated-email"
+      }
+    ],
+    "data_science": [
+      {
+        "name": "Computer Vision Soccer Commentator",
+        "type": "Computer Vision & Machine Learning",
+        "period": "2025",
+        "description": "An end-to-end, modular computer-vision pipeline for soccer: player and ball detection, ByteTrack identity tracking, field segmentation with homography, and scaffolds for event understanding and AI commentary.",
+        "technologies": ["Computer Vision", "Machine Learning", "Python", "OpenCV", "ByteTrack", "Homography"],
+        "url": "/computer-vision-soccer-commentator"
+      },
+      {
+        "name": "Heart Disease Prediction Model",
+        "type": "Data Science & Machine Learning",
+        "period": "2024",
+        "description": "A comprehensive analysis of heart disease data using logistic regression. Features include data preprocessing, feature engineering, and model evaluation with ROC-AUC curves. The project demonstrates practical applications of statistical methods in healthcare predictions.",
+        "technologies": ["Machine Learning", "Logistic Regression", "Healthcare Analytics", "ROC-AUC", "Feature Engineering"],
+        "url": "/heart-disease-prediction"
+      },
+      {
+        "name": "Customer Churn Model",
+        "type": "Data Science & Machine Learning",
+        "period": "2024",
+        "description": "A comprehensive churn prediction system using XGBoost, achieving 93% accuracy through iterative model improvements and advanced feature engineering techniques.",
+        "technologies": ["XGBoost", "Machine Learning", "Customer Analytics", "Feature Engineering", "93% Accuracy"],
+        "url": "/customer-churn"
+      }
+    ]
+  },
+  "activities": [
+    {
+      "name": "Open Project",
+      "period": "2024-Present",
+      "description": "Developed an app used by UC Berkeley students to monitor study room availability, resulting in 30% fewer scheduling conflicts and 40% increased room utilization across campus discovered through student surveys."
+    },
+    {
+      "name": "Latino Business Student Association",
+      "period": "2023-Present",
+      "description": "Analysed club-wide survey data using Excel's data visualization tools and statistical functions to identify trends and provide actionable recommendations."
+    }
+  ],
+  "skills": {
+    "programming_languages": ["Python", "SQL", "R", "React", "Java"],
+    "data_science": ["Pandas", "Scikit-learn", "TensorFlow", "OpenCV", "PyTorch", "Time Series"],
+    "business_intelligence": ["Excel", "Power BI", "Tableau"],
+    "cloud_platforms": ["AWS", "Azure"],
+    "other_tools": ["Data Scraping", "Selenium", "Data Processing", "Engineering", "Mining and Analytics", "A/B Testing", "Figma"]
+  },
+  "chatbot_personality": {
+    "tone": "Professional yet friendly",
+    "style": "Informative and helpful",
+    "expertise": "Data science, machine learning, Diego's background and projects",
+    "responses": "Should be concise but comprehensive, always accurate to the information provided"
+  }
+}

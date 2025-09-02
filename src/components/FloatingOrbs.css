@@ -1,0 +1,204 @@
+/* Organic Background Shapes - Black Themed */
+
+.orb-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(25px);
+  mix-blend-mode: multiply;
+  will-change: transform;
+  background: rgba(0, 0, 0, 0.08);
+  min-width: 100px;
+  min-height: 100px;
+}
+
+/* Individual orb positioning and sizing */
+.orb-1 {
+  top: 15%;
+  left: 20%;
+  width: 70vmin;
+  height: 70vmin;
+  border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+}
+
+.orb-2 {
+  top: 25%;
+  left: 65%;
+  width: 55vmin;
+  height: 55vmin;
+  border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%;
+}
+
+.orb-3 {
+  top: 70%;
+  left: 15%;
+  width: 45vmin;
+  height: 45vmin;
+  border-radius: 50% 60% 30% 60% / 60% 30% 60% 40%;
+}
+
+.orb-4 {
+  top: 80%;
+  left: 70%;
+  width: 60vmin;
+  height: 60vmin;
+  border-radius: 40% 50% 60% 30% / 70% 40% 30% 60%;
+}
+
+/* Different positioning for each container */
+.orb-container-top .orb-1 { top: 15%; left: 20%; }
+.orb-container-top .orb-2 { top: 25%; left: 65%; }
+.orb-container-top .orb-3 { top: 70%; left: 15%; }
+.orb-container-top .orb-4 { top: 80%; left: 70%; }
+
+.orb-container-middle .orb-1 { top: 10%; left: 80%; }
+.orb-container-middle .orb-2 { top: 60%; left: 10%; }
+.orb-container-middle .orb-3 { top: 85%; left: 75%; }
+.orb-container-middle .orb-4 { top: 40%; left: 60%; }
+
+.orb-container-bottom .orb-1 { top: 20%; left: 75%; }
+.orb-container-bottom .orb-2 { top: 65%; left: 25%; }
+.orb-container-bottom .orb-3 { top: 90%; left: 10%; }
+.orb-container-bottom .orb-4 { top: 35%; left: 85%; }
+
+/* Smooth wave-like animations */
+@keyframes animate-orb-1 {
+  0%, 100% {
+    transform: translate(0, 0) rotate(0deg) scale(1);
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+  }
+  25% {
+    transform: translate(8px, -6px) rotate(45deg) scale(1.02);
+    border-radius: 50% 60% 40% 50% / 40% 50% 60% 50%;
+  }
+  50% {
+    transform: translate(-4px, 10px) rotate(90deg) scale(0.98);
+    border-radius: 40% 50% 60% 40% / 60% 40% 50% 60%;
+  }
+  75% {
+    transform: translate(6px, 4px) rotate(135deg) scale(1.01);
+    border-radius: 70% 30% 50% 60% / 30% 70% 60% 40%;
+  }
+}
+
+@keyframes animate-orb-2 {
+  0%, 100% {
+    transform: translate(0, 0) rotate(0deg) scale(1);
+    border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%;
+  }
+  33% {
+    transform: translate(-10px, 8px) rotate(60deg) scale(1.03);
+    border-radius: 60% 40% 50% 60% / 40% 60% 50% 40%;
+  }
+  66% {
+    transform: translate(8px, -12px) rotate(120deg) scale(0.97);
+    border-radius: 50% 70% 30% 50% / 70% 30% 50% 70%;
+  }
+}
+
+@keyframes animate-orb-3 {
+  0%, 100% {
+    transform: translate(0, 0) rotate(0deg) scale(1);
+    border-radius: 50% 60% 30% 60% / 60% 30% 60% 40%;
+  }
+  20% {
+    transform: translate(30px, 15px) rotate(72deg) scale(1.1);
+    border-radius: 40% 50% 60% 40% / 50% 40% 50% 60%;
+  }
+  40% {
+    transform: translate(-20px, -25px) rotate(144deg) scale(0.9);
+    border-radius: 60% 40% 50% 60% / 40% 60% 40% 50%;
+  }
+  60% {
+    transform: translate(15px, 35px) rotate(216deg) scale(1.05);
+    border-radius: 50% 60% 40% 50% / 60% 50% 60% 40%;
+  }
+  80% {
+    transform: translate(-35px, -15px) rotate(288deg) scale(0.95);
+    border-radius: 40% 50% 60% 40% / 50% 40% 60% 50%;
+  }
+}
+
+@keyframes animate-orb-4 {
+  0%, 100% {
+    transform: translate(0, 0) rotate(0deg) scale(1);
+    border-radius: 40% 50% 60% 30% / 70% 40% 30% 60%;
+  }
+  25% {
+    transform: translate(-15px, 30px) rotate(90deg) scale(1.03);
+    border-radius: 60% 30% 40% 70% / 30% 60% 70% 40%;
+  }
+  50% {
+    transform: translate(25px, -20px) rotate(180deg) scale(0.97);
+    border-radius: 30% 70% 60% 40% / 70% 30% 40% 60%;
+  }
+  75% {
+    transform: translate(-20px, -25px) rotate(270deg) scale(1.06);
+    border-radius: 70% 40% 30% 60% / 40% 70% 60% 30%;
+  }
+}
+
+/* Apply animations with different durations for organic feel */
+.animate-orb-1 {
+  animation: animate-orb-1 30s ease-in-out infinite;
+}
+
+.animate-orb-2 {
+  animation: animate-orb-2 35s ease-in-out infinite;
+}
+
+.animate-orb-3 {
+  animation: animate-orb-3 40s ease-in-out infinite;
+}
+
+.animate-orb-4 {
+  animation: animate-orb-4 45s ease-in-out infinite;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .orb {
+    filter: blur(15px);
+  }
+  
+  .orb:nth-child(1) { width: 60vmin; height: 60vmin; }
+  .orb:nth-child(2) { width: 45vmin; height: 45vmin; }
+  .orb:nth-child(3) { width: 35vmin; height: 35vmin; }
+  .orb:nth-child(4) { width: 50vmin; height: 50vmin; }
+}
+
+@media (max-width: 480px) {
+  .orb {
+    filter: blur(12px);
+  }
+  
+  .orb:nth-child(1) { width: 55vmin; height: 55vmin; }
+  .orb:nth-child(2) { width: 40vmin; height: 40vmin; }
+  .orb:nth-child(3) { width: 30vmin; height: 30vmin; }
+  .orb:nth-child(4) { width: 45vmin; height: 45vmin; }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .orb {
+    opacity: 0.08 !important;
+  }
+}
+
+/* Reduced motion support for accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .orb {
+    animation: none !important;
+    transform: none !important;
+  }
+}
