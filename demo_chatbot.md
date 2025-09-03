@@ -82,7 +82,7 @@ node update_about_me.js
 - **Auto-scroll** to latest messages
 - **Hover effects** on interactive elements
 - **Consistent styling** with your portfolio theme
-- **Organic background shapes** with wave-like motion that scroll with the page
+- **Single large background canvas** with organic shapes that move slowly and cover extensive areas of the page
 
 ## 🐛 Troubleshooting
 

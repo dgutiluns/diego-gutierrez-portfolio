@@ -14,9 +14,11 @@ import FadeInSection from './components/FadeInSection';
 function MainContent() {
   return (
     <div className="App">
-      {/* Floating Orbs Background */}
-      <FloatingOrbs position="top" />
-      
+      {/* Floating Orbs Background - Covers entire page */}
+      <div className="full-page-background">
+        <FloatingOrbs />
+      </div>
+
       <FadeInSection>
         <div className="main-content-section">
           <div className="content">
@@ -110,8 +112,6 @@ function MainContent() {
 
       <FadeInSection>
         <div className="projects-section">
-          {/* Additional background shapes for projects section */}
-          <FloatingOrbs position="middle" />
           <h1>Projects</h1>
           <h2 className="section-subtitle-software">Software</h2>
           <div className="projects-container">
@@ -266,8 +266,6 @@ function MainContent() {
       </FadeInSection>
 
       <section className="about-section">
-        {/* Additional background shapes for about section */}
-        <FloatingOrbs position="bottom" />
         <div className="about-content">
           <h1>Me</h1>
           <p>
