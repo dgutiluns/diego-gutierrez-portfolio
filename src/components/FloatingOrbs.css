@@ -42,10 +42,10 @@
 .orb {
   position: absolute;
   border-radius: 50%;
-  filter: blur(var(--orb-blur));
+  filter: blur(var(--orb-blur, 25px));
   mix-blend-mode: multiply;
   will-change: transform;
-  background: var(--orb-bg);
+  background: var(--orb-bg, rgba(0, 0, 0, 0.08));
   min-width: 100px;
   min-height: 100px;
 }

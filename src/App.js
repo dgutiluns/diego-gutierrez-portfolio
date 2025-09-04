@@ -274,20 +274,13 @@ function MainContent() {
         <div className="about-content">
           <h1>Me</h1>
           <p>
-            Hi, I am an aspiring data scientist and passionate for identifying and 
-            solving challenging problems through data driven insights. I am 
-            currently studying at UC Berkeley and am continuing to gain skills in 
-            programming, data science, machine learning.
+            Hi—I'm Diego, an aspiring data scientist who loves turning messy data into clear, actionable insights. I'm a UC Berkeley student (Data Science & Economics) honing my skills in programming, machine learning, and analytics.
           </p>
           <p>
-            I'm an international student born in Bolivia but grew up in Ghana, 
-            Tanzania, and South Africa. My life is currently fuelled by golf, guitar, 
-            and gym.
+            Born in Bolivia and raised in Ghana, Tanzania, and South Africa, I bring a global perspective to my work. When I'm not building models, you'll find me on the golf course, with a guitar, or at the gym.
           </p>
           <p>
-            I've built this portfolio to showcase the projects that I am most 
-            proud of and that demonstrate my ability to apply technological, 
-            statistical, analytical, and organisational skills.
+            This portfolio showcases projects I'm proud of and how I apply technical, statistical, analytical, and organizational skills to real problems.
           </p>
         </div>
         
