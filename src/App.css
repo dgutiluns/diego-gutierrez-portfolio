@@ -10,6 +10,8 @@
 .App {
   width: 100%;
   overflow-x: hidden;
+  position: relative;
+  z-index: 0;
 }
 
 /* First section with tree image */
@@ -21,6 +23,9 @@
   align-items: center;
   padding: 24px;
   position: relative;
+  z-index: 0;
+  background: transparent;
+  pointer-events: none;
 }
 
 
@@ -30,6 +35,9 @@
   z-index: 1;
   opacity: 0;
   animation: fadeInBlur 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  position: relative;
+  pointer-events: auto;
+  background: transparent;
 }
 
 h1 {
@@ -125,6 +133,8 @@ h1 {
   width: auto;
   aspect-ratio: 3/4;
   perspective: 1000px;
+  z-index: 1;
+  pointer-events: auto;
 }
 
 .image-flipper {
@@ -334,6 +344,10 @@ h1 {
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: relative;
+  z-index: 0;
+  background: transparent;
+  pointer-events: none;
 }
 
 .about-content {
@@ -341,12 +355,18 @@ h1 {
   max-width: 800px;
   margin: 0 auto 60px auto;
   padding: 0 20px;
+  pointer-events: auto;
+  background: transparent;
 }
 
 .about-content h1 {
   font-size: 48px;
   margin-bottom: 24px;
   font-weight: 700;
+  position: relative;
+  z-index: 1;
+  pointer-events: auto;
+  background: transparent;
 }
 
 .about-content p {
@@ -527,6 +547,9 @@ h1 {
   width: 100%;
   text-align: center;
   position: relative; /* For absolute positioning of pseudo-elements */
+  z-index: 0;
+  background: transparent;
+  pointer-events: none;
 }
 
 /* New container for horizontal scrolling */
@@ -557,6 +580,8 @@ h1 {
     black 95%,
     transparent
   );
+  pointer-events: auto;
+  background: transparent;
 }
 
 /* Hide scrollbar on Chrome/Safari */
@@ -566,7 +591,7 @@ h1 {
 
 .project-card {
   flex: 0 0 600px;
-  background: white;
+  background: rgba(255, 255, 255, 0.95);
   border-radius: 24px;
   padding: 16px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
@@ -574,6 +599,8 @@ h1 {
   cursor: pointer;
   position: relative;
   height: 400px;
+  backdrop-filter: blur(10px);
+  z-index: 1;
 }
 
 .project-card:hover {
@@ -744,6 +771,10 @@ h1 {
   font-size: 40px;
   margin-bottom: 48px;
   font-weight: 600;
+  position: relative;
+  z-index: 1;
+  pointer-events: auto;
+  background: transparent;
 }
 
 /* Add this to your existing animations */
@@ -782,6 +813,8 @@ h1 {
   margin: 0 auto;
   justify-content: center;
   perspective: 1000px;
+  pointer-events: auto;
+  background: transparent;
 }
 
 .profile-image {
@@ -853,6 +886,10 @@ h1 {
   margin: 40px 0 20px 16rem;
   font-weight: 600;
   text-align: left;
+  position: relative;
+  z-index: 1;
+  pointer-events: auto;
+  background: transparent;
 }
 
 .section-subtitle-data {
@@ -861,6 +898,10 @@ h1 {
   margin: -100px 0 20px 16rem;  /* Added top margin to create space between sections */
   font-weight: 600;
   text-align: left;
+  position: relative;
+  z-index: 1;
+  pointer-events: auto;
+  background: transparent;
 }
 
 .project-container {

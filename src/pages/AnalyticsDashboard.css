@@ -2,6 +2,7 @@
     padding: 60px;
     max-width: 1400px;
     margin: 0 auto;
+    background: transparent;
   }
   
   /* Title Section */
@@ -31,9 +32,10 @@
   .project-media {
     width: 50%;
     height: 400px;
-    background: #E5E7EB;
+    background: rgba(229, 231, 235, 0.9);
     border-radius: 12px;
     overflow: hidden;
+    backdrop-filter: blur(10px);
   }
   
   .project-video {
@@ -50,6 +52,7 @@
       margin: 0 auto;
       opacity: 0;
       animation: fadeInBlur 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+      background: transparent;
   }
     
     /* Add delay for subsequent sections */

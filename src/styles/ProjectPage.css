@@ -1,14 +1,16 @@
 .project-page {
   min-height: 100vh;
   padding: 2rem;
+  position: relative;
 }
 
 .project-image-container {
   width: 50%;
   height: 400px;
-  background: #E5E7EB;
+  background: rgba(229, 231, 235, 0.9);
   border-radius: 12px;
   overflow: hidden;
+  backdrop-filter: blur(10px);
 }
 
 .project-header-image {
@@ -68,6 +70,7 @@
   max-width: 1200px;
   margin: 0 auto;
   position: relative;
+  z-index: 1;
 }
 
 .side-menu {
@@ -122,6 +125,9 @@
 
 .main-content {
   flex: 1;
+  position: relative;
+  z-index: 1;
+  background: transparent;
 }
 
 .section-anchor {
@@ -156,6 +162,9 @@
   padding: 60px;
   max-width: 1400px;
   margin: 0 auto;
+  position: relative;
+  z-index: 1;
+  background: transparent;
 }
 
 /* Title Section */
@@ -185,6 +194,7 @@
   margin: 100px auto 0;
   opacity: 0;
   animation: fadeInBlur 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  background: transparent;
 }
 
 .analysis-image-container {

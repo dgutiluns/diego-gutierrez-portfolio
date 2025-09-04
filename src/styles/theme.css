@@ -73,7 +73,7 @@ body {
 
 /* Main App Container */
 .App {
-  background-color: var(--bg-primary);
+  background-color: transparent;
   color: var(--text-primary);
 }
 
@@ -81,7 +81,7 @@ body {
 .main-content-section,
 .projects-section,
 .about-section {
-  background-color: var(--bg-primary);
+  background-color: transparent;
   color: var(--text-primary);
 }
 
@@ -160,7 +160,7 @@ input, textarea, select {
 
 /* Project Pages Theme Integration */
 .project-container {
-  background-color: var(--bg-primary);
+  background-color: transparent;
   color: var(--text-primary);
 }
 

@@ -1,7 +1,7 @@
 /* Single Large Background Canvas - Orbs Stay in Place When Scrolling */
 
 .full-page-background {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
@@ -29,7 +29,7 @@
 
 
 .orb-container {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
