@@ -1,6 +1,9 @@
 import React, { useEffect } from 'react';
 import './AutomatedEmail.css';
+import '../styles/theme.css';
 import { Link } from 'react-router-dom';
+import ThemeToggle from '../components/ThemeToggle';
+import FloatingOrbs from '../components/FloatingOrbs';
 
 function AutomatedEmail() {
   useEffect(() => {
@@ -35,6 +38,15 @@ function AutomatedEmail() {
 
   return (
     <div className="dashboard-container">
+      {/* Theme Toggle - Top Left */}
+      <ThemeToggle />
+      
+            
+      {/* Floating Orbs Background - Covers entire page */}
+      <div className="full-page-background">
+        <FloatingOrbs />
+      </div>
+      
       {/* Title Section */}
       <div className="title-section">
         <h1>Automated Email<br />System</h1>

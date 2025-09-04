@@ -1,6 +1,9 @@
 import React, { useEffect, useState } from 'react';
+import '../styles/theme.css';
 import { Link } from 'react-router-dom';
 import '../styles/ProjectPage.css';
+import ThemeToggle from '../components/ThemeToggle';
+import FloatingOrbs from '../components/FloatingOrbs';
 
 function ComputerVisionSoccerCommentator() {
   const [activeSection, setActiveSection] = useState('overview');
@@ -90,6 +93,14 @@ function ComputerVisionSoccerCommentator() {
 
   return (
     <div className="project-page">
+      {/* Theme Toggle - Top Left */}
+      <ThemeToggle />
+      
+      {/* Floating Orbs Background - Covers entire page */}
+      <div className="full-page-background">
+        <FloatingOrbs />
+      </div>
+      
       <div className="project-container">
         <nav className={`side-menu ${menuVisible ? 'visible' : ''}`}>
           <ul className="side-menu-list">

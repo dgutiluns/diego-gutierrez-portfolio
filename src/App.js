@@ -1,5 +1,6 @@
 import React from 'react';
 import './App.css';
+import './styles/theme.css';
 import { HashRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import AnalyticsDashboard from './pages/AnalyticsDashboard';
 import AutomatedEmail from './pages/AutomatedEmail';
@@ -9,11 +10,15 @@ import ComputerVisionSoccerCommentator from './pages/ComputerVisionSoccerComment
 import Chatbot from './components/Chatbot';
 import FloatingOrbs from './components/FloatingOrbs';
 import FadeInSection from './components/FadeInSection';
+import ThemeToggle from './components/ThemeToggle';
 
 // Create a separate component for your main content
 function MainContent() {
   return (
     <div className="App">
+      {/* Theme Toggle - Top Left */}
+      <ThemeToggle />
+      
       {/* Floating Orbs Background - Covers entire page */}
       <div className="full-page-background">
         <FloatingOrbs />

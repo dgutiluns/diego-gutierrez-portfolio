@@ -18,6 +18,14 @@
   height: auto;
 }
 
+/* Ensure project page containers also have proper positioning for orbs */
+.dashboard-container,
+.project-page {
+  position: relative;
+  min-height: 100vh;
+  height: auto;
+}
+
 
 
 .orb-container {
@@ -34,10 +42,10 @@
 .orb {
   position: absolute;
   border-radius: 50%;
-  filter: blur(25px);
+  filter: blur(var(--orb-blur));
   mix-blend-mode: multiply;
   will-change: transform;
-  background: rgba(0, 0, 0, 0.08);
+  background: var(--orb-bg);
   min-width: 100px;
   min-height: 100px;
 }

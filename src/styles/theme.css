@@ -1,0 +1,225 @@
+/* Theme System - CSS Variables for Light and Dark Modes */
+
+:root {
+  /* Light Mode (Default) */
+  --bg-primary: #ffffff;
+  --bg-secondary: #f8f9fa;
+  --bg-tertiary: #e9ecef;
+  --text-primary: #212529;
+  --text-secondary: #6c757d;
+  --text-muted: #adb5bd;
+  --border-color: #dee2e6;
+  --accent-color: #007bff;
+  --accent-hover: #0056b3;
+  --shadow-light: rgba(0, 0, 0, 0.1);
+  --shadow-medium: rgba(0, 0, 0, 0.15);
+  --shadow-heavy: rgba(0, 0, 0, 0.2);
+  --orb-bg: rgba(0, 0, 0, 0.08);
+  --orb-blur: 25px;
+  --button-bg: #ffffff;
+  --button-text: #212529;
+  --button-border: #dee2e6;
+  --button-hover: #f8f9fa;
+  --card-bg: #ffffff;
+  --card-border: #dee2e6;
+  --link-color: #007bff;
+  --link-hover: #0056b3;
+  --success-color: #28a745;
+  --warning-color: #ffc107;
+  --error-color: #dc3545;
+  --info-color: #17a2b8;
+}
+
+[data-theme="dark"] {
+  /* Dark Mode */
+  --bg-primary: #1a1a1a;
+  --bg-secondary: #2d2d2d;
+  --bg-tertiary: #404040;
+  --text-primary: #ffffff;
+  --text-secondary: #b3b3b3;
+  --text-muted: #808080;
+  --border-color: #404040;
+  --accent-color: #4dabf7;
+  --accent-hover: #74c0fc;
+  --shadow-light: rgba(0, 0, 0, 0.3);
+  --shadow-medium: rgba(0, 0, 0, 0.4);
+  --shadow-heavy: rgba(0, 0, 0, 0.5);
+  --orb-bg: rgba(255, 255, 255, 0.08);
+  --orb-blur: 25px;
+  --button-bg: #2d2d2d;
+  --button-text: #ffffff;
+  --button-border: #404040;
+  --button-hover: #404040;
+  --card-bg: #2d2d2d;
+  --card-border: #404040;
+  --link-color: #4dabf7;
+  --link-hover: #74c0fc;
+  --success-color: #51cf66;
+  --warning-color: #ffd43b;
+  --error-color: #ff6b6b;
+  --info-color: #66d9e8;
+}
+
+/* Global Theme Transitions */
+* {
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Body Theme Application */
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+}
+
+/* Main App Container */
+.App {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+}
+
+/* Content Sections */
+.main-content-section,
+.projects-section,
+.about-section {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--text-primary);
+}
+
+/* Paragraphs */
+p {
+  color: var(--text-secondary);
+}
+
+/* Links */
+a {
+  color: var(--link-color);
+}
+
+a:hover {
+  color: var(--link-hover);
+}
+
+/* Buttons */
+.button {
+  background-color: var(--button-bg);
+  color: var(--button-text);
+  border: 1px solid var(--button-border);
+}
+
+.button:hover {
+  background-color: var(--button-hover);
+}
+
+/* Cards and Containers */
+.image-wrapper,
+.profile-image,
+.image-flipper {
+  background-color: var(--card-bg);
+  border: 1px solid var(--card-border);
+}
+
+/* Form Elements */
+input, textarea, select {
+  background-color: var(--bg-secondary);
+  color: var(--text-primary);
+  border: 1px solid var(--border-color);
+}
+
+/* Chatbot Theme Integration */
+.chat-toggle {
+  background-color: var(--button-bg);
+  color: var(--button-text);
+  border: 1px solid var(--button-border);
+}
+
+.chat-container {
+  background-color: var(--card-bg);
+  border: 1px solid var(--card-border);
+}
+
+.chat-messages {
+  background-color: var(--bg-secondary);
+}
+
+.chat-input {
+  background-color: var(--bg-secondary);
+  color: var(--text-primary);
+  border: 1px solid var(--border-color);
+}
+
+/* Floating Orbs Theme Integration */
+.orb {
+  background: var(--orb-bg);
+  filter: blur(var(--orb-blur));
+}
+
+/* Project Pages Theme Integration */
+.project-container {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+}
+
+.project-card {
+  background-color: var(--card-bg);
+  border: 1px solid var(--card-border);
+}
+
+/* Navigation and Breadcrumbs */
+.nav-link {
+  color: var(--link-color);
+}
+
+.nav-link:hover {
+  color: var(--link-hover);
+}
+
+/* Code Blocks */
+pre, code {
+  background-color: var(--bg-secondary);
+  color: var(--text-primary);
+  border: 1px solid var(--border-color);
+}
+
+/* Tables */
+table {
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-color);
+}
+
+th, td {
+  border: 1px solid var(--border-color);
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-secondary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border-color);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--text-muted);
+}
+
+/* Selection Styling */
+::selection {
+  background-color: var(--accent-color);
+  color: var(--bg-primary);
+}
+
+::-moz-selection {
+  background-color: var(--accent-color);
+  color: var(--bg-primary);
+}

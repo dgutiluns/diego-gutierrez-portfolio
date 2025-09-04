@@ -13,6 +13,14 @@
 
 4. **Click the chat button** to open the chatbot interface
 
+## 🌓 Test the Theme Toggle
+
+1. **Look for the theme toggle** in the top-left corner - it's a small toggle switch with sun/moon icons
+2. **Click the toggle** to switch between day and night modes
+3. **Notice the smooth transition** as all colors change across the entire site
+4. **Watch the floating orbs** - they change from black (light mode) to white (dark mode)
+5. **Navigate between pages** - the theme preference is saved and persists
+
 ## 💬 Test the Chatbot
 
 ### **Try these questions to see the AI in action:**
@@ -77,6 +85,8 @@ node update_about_me.js
 
 ## 🎨 Design Features
 
+- **Theme Toggle** - Switch between day/night modes with smooth transitions
+- **Floating Orbs** - Organic background shapes that change color with theme (black/white)
 - **Smooth animations** when opening/closing
 - **Typing indicators** for realistic feel
 - **Auto-scroll** to latest messages
@@ -99,7 +109,11 @@ node update_about_me.js
 ## 🎉 Success Indicators
 
 You'll know everything is working when:
-- ✅ Chat button appears in bottom-right corner
+- ✅ Theme toggle appears in top-left corner
+- ✅ Clicking switches between day/night modes smoothly
+- ✅ Floating orbs change from black (light) to white (dark) with theme
+- ✅ Theme persists when navigating between pages
+- ✅ Chat button appears in bottom-left corner
 - ✅ Clicking opens a smooth chat interface
 - ✅ Typing questions gets relevant responses
 - ✅ Design matches your portfolio aesthetic
