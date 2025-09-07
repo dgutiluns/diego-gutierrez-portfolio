@@ -3,9 +3,9 @@ import './ThemeToggle.css';
 
 const ThemeToggle = () => {
   const [isDarkMode, setIsDarkMode] = useState(() => {
-    // Check localStorage for saved preference, default to light mode
+    // Check localStorage for saved preference, default to dark mode
     const saved = localStorage.getItem('theme');
-    return saved ? saved === 'dark' : false;
+    return saved ? saved === 'dark' : true;
   });
 
   useEffect(() => {
